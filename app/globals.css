@@ -23,14 +23,18 @@
   }
 
   .hero {
-    @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+    @apply flex xl:flex-row flex-col gap-5 z-0 max-w-[1440px] mx-auto;
   }
 
   .hero-title {
-    @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+    @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold xl:w-[600px];
   }
 
   .hero-subtitle {
-    @apply text-[27px] text-black-100 font-light mt-5;
+    @apply text-[20px] text-black-100 font-light mt-3 xl:w-[550px];
+  }
+
+  .custom-btn {
+    @apply flex justify-center items-center py-3 px-6 outline-none;
   }
 }
