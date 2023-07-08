@@ -22,7 +22,7 @@ const Hero = () => {
           handleClick={handleScroll}
         />
       </div>
-      <div className="xl:absolute xl:top-10 xl:right-0">
+      <div className="xl:absolute xl:top-10 xl:right-0 pl-6 xl:p-0">
         <div className="xl:w-[750px]">
           <img src="/hero.png" alt="hero" />
         </div>
