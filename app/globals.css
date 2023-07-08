@@ -8,3 +8,29 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+@layer components {
+  .max-width {
+    @apply max-w-[1440px] mx-auto;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .hero {
+    @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  }
+
+  .hero-title {
+    @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+  }
+
+  .hero-subtitle {
+    @apply text-[27px] text-black-100 font-light mt-5;
+  }
+}
