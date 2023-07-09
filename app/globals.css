@@ -37,4 +37,12 @@
   .custom-btn {
     @apply flex justify-center items-center py-3 px-6 outline-none;
   }
+
+  .combobox-input {
+    @apply bg-transparent text-sm text-gray-600 outline-none placeholder:text-sm;
+  }
+
+  .combobox-option {
+    @apply cursor-pointer py-2 px-5 text-xs hover:bg-gray-100 transition duration-100;
+  }
 }
