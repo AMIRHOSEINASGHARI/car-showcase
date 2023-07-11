@@ -1,10 +1,12 @@
 "use client";
-import { calculateCarRent } from "@/utils";
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CustomButton } from ".";
+import CarDetails from "./CarDetails";
 
 const CarCard = ({ car }) => {
+  // Props
   const {
     city_mpg,
     combination_mpg,
@@ -18,7 +20,10 @@ const CarCard = ({ car }) => {
     transmission,
     year,
   } = car;
-  console.log(car);
+
+  // Car Details Showing
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="car-card group">
       <h1 className="capitalize mb-5 font-semibold text-lg">
@@ -30,7 +35,11 @@ const CarCard = ({ car }) => {
         <span className="self-end text-xs font-normal">/day</span>
       </p>
       <div className="w-full flex items-center justify-center mb-5">
-        <Image src="/hero-car.png" width={250} height={250} />
+        <Image
+          src={generateCarImageUrl(car, "angle")}
+          width={250}
+          height={250}
+        />
       </div>
       <div>
         <div className="relative">
@@ -72,12 +81,19 @@ const CarCard = ({ car }) => {
             <CustomButton
               title="View Details"
               containerStyles="bg-primary-blue rounded-full w-full text-white text-sm font-semibold"
-              handleClick={() => {}}
+              handleClick={() => {
+                setIsOpen(true);
+              }}
               rightIcon="/right-arrow.svg"
             />
           </div>
         </div>
       </div>
+      <CarDetails
+        car={car}
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+      />
     </div>
   );
 };
