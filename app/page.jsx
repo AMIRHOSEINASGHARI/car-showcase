@@ -1,5 +1,5 @@
 // Components
-import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 // Fetching cars
 import { fetchCars } from "@/utils";
 // Constants
@@ -10,10 +10,11 @@ const Home = async ({ searchParams }) => {
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
     fuel: searchParams.fuel || "",
-    limit: searchParams.model || 30,
+    limit: searchParams.limit || 10,
     model: searchParams.model || "",
   });
   const isDataRecieved = allCars.length > 0;
+  console.log(searchParams);
 
   return (
     <div>
@@ -36,11 +37,17 @@ const Home = async ({ searchParams }) => {
         </div>
         <div>
           {isDataRecieved ? (
-            <div className="cars-section">
-              {allCars.map((car, i) => (
-                <CarCard car={car} key={i} />
-              ))}
-            </div>
+            <section>
+              <div className="cars-section">
+                {allCars.map((car, i) => (
+                  <CarCard car={car} key={i} />
+                ))}
+              </div>
+              <ShowMore
+                pageNumber={(searchParams.limit || 10) / 10}
+                isNext={(searchParams.limit || 10) > allCars.length}
+              />
+            </section>
           ) : (
             <div className="font-bold">
               <h1 className="text-3xl">Oops, no results!</h1>
