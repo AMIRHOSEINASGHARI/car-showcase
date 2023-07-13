@@ -1,9 +1,11 @@
 "use client";
 
+// React and Next Imports
 import { useState } from "react";
-import { SearchManufacturer } from ".";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+// Components Imports
+import { SearchManufacturer } from ".";
 
 // Search Button
 const SearchButton = ({ otherClasses }) => (

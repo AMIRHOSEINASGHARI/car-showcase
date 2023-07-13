@@ -1,9 +1,12 @@
 "use client";
-import { calculateCarRent, generateCarImageUrl } from "@/utils";
-import Image from "next/image";
+
+// React and Next Imports
 import React, { useState } from "react";
-import { CustomButton } from ".";
-import CarDetails from "./CarDetails";
+import Image from "next/image";
+// Comonents Imports
+import { CarDetails, CustomButton } from ".";
+// Functions Imports
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
 
 const CarCard = ({ car }) => {
   // Props

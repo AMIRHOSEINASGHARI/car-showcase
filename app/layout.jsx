@@ -1,4 +1,6 @@
+// CSS Imports
 import "./globals.css";
+// Components Imports
 import { Footer, Navbar } from "@/components";
 
 export default function RootLayout({ children }) {

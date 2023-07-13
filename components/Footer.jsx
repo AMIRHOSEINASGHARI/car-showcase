@@ -1,6 +1,8 @@
-import { footerLinks } from "@/constants";
+// Next Imports
 import Image from "next/image";
 import Link from "next/link";
+// Constants Imports
+import { footerLinks } from "@/constants";
 
 const Footer = () => {
   return (

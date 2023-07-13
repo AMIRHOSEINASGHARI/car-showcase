@@ -1,10 +1,11 @@
 "use client";
 
+// React and Next Imports
 import React, { useState } from "react";
-// Components
-import { Combobox } from "@headlessui/react";
 import Image from "next/image";
-// Constants
+// Components Imports
+import { Combobox } from "@headlessui/react";
+// Constants Imports
 import { manufacturers } from "@/constants";
 
 const SearchManufacturer = ({ manufacturer, setManufacturer }) => {

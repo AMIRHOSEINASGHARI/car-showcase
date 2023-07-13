@@ -1,16 +1,14 @@
 "use client";
 
 // React Imports
-import { Fragment, useState } from "react";
-
+import { Fragment } from "react";
 // NextJS Imports
 import Image from "next/image";
-
 // React Icons Imports
 import { IoMdClose } from "react-icons/io";
-
 // Headless UI Imports
 import { Dialog, Transition } from "@headlessui/react";
+// Functions Imports
 import { generateCarImageUrl } from "@/utils";
 
 const CarDetails = ({ car, isOpen, closeModal }) => {

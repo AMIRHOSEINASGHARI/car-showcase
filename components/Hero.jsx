@@ -1,6 +1,6 @@
 "use client";
 
-// Components
+// Components Imports
 import { CustomButton } from ".";
 
 const Hero = () => {

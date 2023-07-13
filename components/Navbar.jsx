@@ -1,7 +1,8 @@
-// Components
+// Next Imports
 import Image from "next/image";
-import { CustomButton } from ".";
 import Link from "next/link";
+// Components Imports
+import { CustomButton } from ".";
 
 const Navbar = () => {
   return (

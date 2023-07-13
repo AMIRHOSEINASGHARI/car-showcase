@@ -1,8 +1,8 @@
-// Components
+// Components IMPORTS
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
-// Fetching cars
+// Fetching cars function Import
 import { fetchCars } from "@/utils";
-// Constants
+// Constants Imports
 import { fuels, yearsOfProduction } from "@/constants";
 
 const Home = async ({ searchParams }) => {
