@@ -29,6 +29,7 @@ const CarCard = ({ car }) => {
           src={generateCarImageUrl(car, "angle")}
           width={250}
           height={250}
+          alt="car image"
         />
       </div>
       <div>

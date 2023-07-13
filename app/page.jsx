@@ -19,7 +19,7 @@ const Home = async ({ searchParams }) => {
   return (
     <div>
       <Hero />
-      <div className="mt-20 px-6 max-w-[1440px] mx-auto">
+      <div className="mt-20 px-6 max-w-[1440px] mx-auto" id="discover">
         <div>
           <h1 className="text-3xl font-extrabold mb-2">Car Catalogue</h1>
           <p className="text-sm text-gray-500">
