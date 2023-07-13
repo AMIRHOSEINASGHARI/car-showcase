@@ -14,7 +14,6 @@ const Home = async ({ searchParams }) => {
     model: searchParams.model || "",
   });
   const isDataRecieved = allCars.length > 0;
-  console.log(searchParams);
 
   return (
     <div>
