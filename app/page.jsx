@@ -50,7 +50,7 @@ const Home = async ({ searchParams }) => {
           ) : (
             <div className="font-bold">
               <h1 className="text-3xl">Oops, no results!</h1>
-              <p className="capitalize">{allCars.message}</p>
+              <p className="capitalize">{allCars.messages}</p>
             </div>
           )}
         </div>
