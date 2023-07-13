@@ -2,7 +2,8 @@
 import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
 // Fetching cars
 import { fetchCars } from "@/utils";
-import { useRouter } from "next/navigation";
+// Constants
+import { fuels, yearsOfProduction } from "@/constants";
 
 const Home = async ({ searchParams }) => {
   const allCars = await fetchCars({
@@ -12,8 +13,7 @@ const Home = async ({ searchParams }) => {
     limit: searchParams.model || 10,
     model: searchParams.model || "",
   });
-  const isDataRecieved =
-    Array.isArray(allCars) || allCars.length > 0 || allCars;
+  const isDataRecieved = allCars.length > 0;
 
   return (
     <div>
@@ -29,8 +29,8 @@ const Home = async ({ searchParams }) => {
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-5 lg:space-y-0 lg:space-x-5">
             <SearchBar />
             <div className="flex items-center gap-5">
-              <CustomFilter title="fuel" />
-              <CustomFilter title="year" />
+              <CustomFilter title="fuel" options={fuels} />
+              <CustomFilter title="year" options={yearsOfProduction} />
             </div>
           </div>
         </div>
