@@ -51,7 +51,7 @@
   }
 
   .car-card {
-    @apply bg-slate-50 group-hover:invisible rounded-2xl p-5 hover:shadow-lg hover:bg-white hover:shadow-gray-300 transition duration-150 ease-in-out;
+    @apply bg-slate-50 group-hover:invisible rounded-2xl p-5 hover:shadow-lg hover:bg-white hover:shadow-gray-300 transition duration-150 ease-in-out flex flex-col justify-between;
   }
 
   .custom-filter-btn {

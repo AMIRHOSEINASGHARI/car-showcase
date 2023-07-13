@@ -7,33 +7,23 @@ import CarDetails from "./CarDetails";
 
 const CarCard = ({ car }) => {
   // Props
-  const {
-    city_mpg,
-    combination_mpg,
-    cylinders,
-    displacement,
-    drive,
-    fuel_type,
-    highway_mpg,
-    make,
-    model,
-    transmission,
-    year,
-  } = car;
+  const { city_mpg, drive, make, model, transmission, year } = car;
 
   // Car Details Showing
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="car-card group">
-      <h1 className="capitalize mb-5 font-semibold text-lg">
-        {make.toUpperCase()} {model}
-      </h1>
-      <p className="flex mb-5 font-bold text-2xl">
-        <span className="self-start text-xs font-normal">$</span>
-        {calculateCarRent(city_mpg, year)}
-        <span className="self-end text-xs font-normal">/day</span>
-      </p>
+      <div>
+        <h1 className="capitalize mb-5 font-semibold text-lg">
+          {make.toUpperCase()} {model}
+        </h1>
+        <p className="flex mb-5 font-bold text-2xl">
+          <span className="self-start text-xs font-normal">$</span>
+          {calculateCarRent(city_mpg, year)}
+          <span className="self-end text-xs font-normal">/day</span>
+        </p>
+      </div>
       <div className="w-full flex items-center justify-center mb-5">
         <Image
           src={generateCarImageUrl(car, "angle")}

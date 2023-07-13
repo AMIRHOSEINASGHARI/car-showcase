@@ -10,7 +10,7 @@ const Home = async ({ searchParams }) => {
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
     fuel: searchParams.fuel || "",
-    limit: searchParams.model || 10,
+    limit: searchParams.model || 30,
     model: searchParams.model || "",
   });
   const isDataRecieved = allCars.length > 0;
