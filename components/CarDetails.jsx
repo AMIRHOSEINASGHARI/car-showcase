@@ -79,9 +79,9 @@ const CarDetails = ({ car, isOpen, closeModal }) => {
                     </div>
                   </Dialog.Title>
                   <Dialog.Title className="my-3">
-                    <h1 className="text-xl font-bold capitalize mb-2">
+                    <p className="text-xl font-bold capitalize mb-2">
                       {car.make} {car.model}
-                    </h1>
+                    </p>
                     <hr />
                   </Dialog.Title>
                   <div className="mt-2 text-sm capitalize space-y-1">

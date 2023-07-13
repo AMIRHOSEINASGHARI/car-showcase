@@ -17,19 +17,19 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }) => {
         });
 
   return (
-    <div>
+    <div className="relative">
       <Combobox value={manufacturer} onChange={setManufacturer}>
-        <div className="flex rounded-lg bg-gray-100 py-3 px-5 mb-2">
+        <div className="flex rounded-lg bg-gray-100 py-3 px-5">
           <Combobox.Button className="mr-2">
             <Image src="/car-logo.svg" alt="car logo" width={20} height={20} />
           </Combobox.Button>
           <Combobox.Input
             onChange={(e) => setQuery(e.target.value)}
             className="combobox-input w-full"
-            placeholder="Volkswagen"
+            placeholder="Manufacturer ..."
           />
         </div>
-        <Combobox.Options className="shadow-xl shadow-slate-200 rounded-lg space-y-1 max-h-[300px] overflow-y-scroll">
+        <Combobox.Options className="shadow-xl shadow-slate-200 bg-white rounded-lg space-y-1 max-h-[300px] overflow-y-scroll w-full absolute top-12 z-20">
           {filteredManufacturers.length === 0 && query !== "" ? (
             <Combobox.Option
               value={query}

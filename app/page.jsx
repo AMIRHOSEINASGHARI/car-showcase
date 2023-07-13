@@ -19,7 +19,7 @@ const Home = async () => {
           </p>
         </div>
         <div className="my-10">
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-5 lg:space-y-0 lg:space-x-5">
             <SearchBar />
             <div className="flex items-center gap-5">
               <CustomFilter title="fuel" />
