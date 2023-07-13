@@ -1,11 +1,12 @@
-export async function fetchCars() {
+export async function fetchCars(props) {
+  const { manufacturer, year, fuel, limit, model } = props;
   const headers = {
     "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY,
     "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_API_HOST,
   };
 
   const response = await fetch(
-    "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla",
+    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?fuel_type=${fuel}&limit=${limit}&model=${model}&make=${manufacturer}&year=${year}`,
     {
       headers: headers,
     }

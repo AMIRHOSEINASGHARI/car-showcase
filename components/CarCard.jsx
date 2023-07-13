@@ -27,7 +27,7 @@ const CarCard = ({ car }) => {
   return (
     <div className="car-card group">
       <h1 className="capitalize mb-5 font-semibold text-lg">
-        {make} {model}
+        {make.toUpperCase()} {model}
       </h1>
       <p className="flex mb-5 font-bold text-2xl">
         <span className="self-start text-xs font-normal">$</span>
@@ -64,7 +64,7 @@ const CarCard = ({ car }) => {
                 height={20}
                 className="mb-1"
               />
-              <p className="text-xs">{drive.toUpperCase()}</p>
+              <p className="text-xs">{drive?.toUpperCase()}</p>
             </div>
             <div className="flex flex-col items-center">
               <Image

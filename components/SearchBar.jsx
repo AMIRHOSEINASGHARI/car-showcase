@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SearchManufacturer } from ".";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // Search Button
 const SearchButton = ({ otherClasses }) => (
@@ -17,9 +18,40 @@ const SearchButton = ({ otherClasses }) => (
 const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
   const [model, setModel] = useState("");
+  const router = useRouter();
+
+  const updateSearchParams = (model, manufacturer) => {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    // Seting model search
+    if (model) {
+      searchParams.set("model", model);
+    } else {
+      searchParams.delete("model");
+    }
+
+    // Seting manufacturer search
+    if (manufacturer) {
+      searchParams.set("manufacturer", manufacturer);
+    } else {
+      searchParams.delete("manufacturer");
+    }
+
+    const newPathName = `${
+      window.location.pathname
+    }?${searchParams.toString()}`;
+
+    router.push(newPathName);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ model, manufacturer });
+
+    if (manufacturer === "" && model === "") {
+      return alert("Please fill in the search bar");
+    }
+
+    updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
   };
 
   return (
