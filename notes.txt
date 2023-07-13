@@ -1,0 +1,6 @@
+
+There is an issue in search params in nextjs new version. While you just set
+a new params in application's URL, you see that the whole application scrolls
+to the top.
+
+The Vercel development team says they are fixing this bug
